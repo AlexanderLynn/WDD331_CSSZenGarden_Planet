@@ -1,0 +1,31 @@
+// font import
+@import url('https://fonts.googleapis.com/css2?family=Jura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+
+// color palette - these colors will be the color swatches of the Colors section
+
+$color-1: #002329; // Dark Jungle Green - space color
+$color-2: #efe2be; // Dutch White - stars
+$color-3: #f7f0de; // Eggsshell - orbit 
+$color-4: #94d2bd; // Middle Blue Green - headers
+$color-5: #000000; // black? - main text
+
+$planet1: #9B2226; 
+$planet2: #0A9396; 
+$planet3: #ffb833; // sun
+$planet4: #c87741;
+$planet5: #c2adbf; 
+$planet6: #56b35c;
+//$planet7: #; 
+//$planet8: #;
+//$planet9: #; 
+
+
+// additional colors
+
+$success: #6fce72; // green
+$alert: $color-3; // red
+
+// fonts
+$primary-font: 'Jura', sans-serif;
+$secondary-font: 'Forum', cursive;
