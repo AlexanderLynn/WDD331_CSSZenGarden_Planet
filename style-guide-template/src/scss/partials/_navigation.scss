@@ -1,10 +1,10 @@
 header {
-    background-color: $color-2;
+    background-color: $color-4;
   }
   
   .cd-logo {
     /* logo box style */
-    background-color: $color-1;
+    background-color: $planet3;
     width: 120px;
   
     @include MQ(M) {
@@ -61,20 +61,20 @@ header {
   
   .cd-download {
     /* download button top-right visible on big devices */
-    background-color: lighten($color-2, 10%);
+    background-color: lighten($color-4, 10%);
   
     .no-touch &:hover {
-      background-color: lighten($color-2, 15%);
+      background-color: lighten($color-4, 15%);
     }
   
     span {
       /* tooltip */
-      background: $color-1;
+      background: $color-3;
       color: $color-5;
   
       &::before {
         /* right arrow color */
-        border-color: $color-1;
+        border-color: $color-3;
       }
     }
   }
