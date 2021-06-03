@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,iDAAiD;AAGjD,AAAA,aAAa,AAAA,UAAW,CAAA,CAAC,GAAG,aAAa,AAAA,UAAW,CAAA,CAAC,GAAG,aAAa,AAAA,UAAW,CAAA,CAAC,EAAE;EAC/E,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,GAAG;EAC1B,MAAM,EAAE,eAAe;EAEvB,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,GAAG;EACX,aAAa,EAAE,GAAG;EAClB,MAAM,EAAE,cAAc;CACzB",
+    "sources": [
+        "small-styles.scss"
+    ],
+    "names": [],
+    "file": "small-styles.css"
+}

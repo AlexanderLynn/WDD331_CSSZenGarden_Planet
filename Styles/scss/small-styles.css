@@ -1,0 +1,13 @@
+/* Small SCSS is for mobile and tablet screens */
+.page-wrapper:nth-child(1), .page-wrapper:nth-child(2), .page-wrapper:nth-child(3) {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  border: black solid 3px;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  border: grey solid 5px;
+}
+/*# sourceMappingURL=small-styles.css.map */
