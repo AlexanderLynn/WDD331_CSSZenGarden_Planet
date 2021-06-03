@@ -1,10 +1,14 @@
 /* Small SCSS is for mobile and tablet screens */
-.page-wrapper:nth-child(1), .page-wrapper:nth-child(2), .page-wrapper:nth-child(3) {
+.intro, #zen-supporting, .wrapper {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  border: black solid 3px;
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+}
+
+.intro:nth-child(1n), #zen-supporting:nth-child(1n), .wrapper:nth-child(1n) {
   width: 80%;
   height: 80%;
   border-radius: 50%;
