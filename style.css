@@ -1,4 +1,6 @@
 /* Small SCSS is for mobile and tablet screens */
+@import url("https://fonts.googleapis.com/css2?family=Jura&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Forum&display=swap");
 /* .intro, #zen-supporting, .wrapper {
     display: grid;
     grid-template-columns: 1fr;
@@ -12,24 +14,80 @@
     border-radius: 50%;
     border: grey solid 5px;
 } */
+html {
+  background-color: #001a1f;
+}
+
+h1,
+h2 {
+  font-family: "Forum", cursive;
+  color: #000000;
+  font-size: x-large;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Forum", cursive;
+  color: #94d2bd;
+  text-align: center;
+}
+
+p {
+  color: #000000;
+}
+p a {
+  text-decoration: underline;
+}
+
+/* once I added the half circle for the intro the "planets" collapsed and overlap now */
+.intro {
+  padding-top: 0.75em;
+  text-align: center;
+  height: 200px;
+  width: 400px;
+  border-radius: 0 0 400px 400px;
+  background-color: #ffb833;
+}
+
 /* "circles" each div with the role of "article" 
 Also "circles" each section in the sidebar, we need to decide if we want that as planets or something different. I think we decided to have them as planets though.*/
 [role=article],
 .design-selection,
 .design-archives,
 .zen-resources {
-  width: 25%;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
-  border: grey solid 5px;
   padding: 5em 5em;
+  margin: 5em 25%;
+  background-color: #c87741;
 }
 
-/*.intro {
-    padding-top: 2em;
-    padding-left: 15em;
-}*/
-h3 {
-  text-align: center;
+/* Large SCSS is for screens larger than tablets */
+@media screen and (min-width: 900px) {
+  h1,
+h2 {
+    font-size: xx-large;
+  }
+
+  [role=article],
+.design-selection,
+.design-archives,
+.zen-resources {
+    width: 450px;
+    height: 450px;
+    padding: 5em 5em;
+    margin: 5em 20%;
+    background-color: #9B2226;
+  }
+
+  .intro {
+    height: 300px;
+    width: 600px;
+    border-radius: 0 0 600px 600px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
