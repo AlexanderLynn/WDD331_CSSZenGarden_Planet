@@ -34,25 +34,42 @@ h6 {
     font-family: $secondary-font;
     color: $color-4;
     text-align: center;
+    font-size: 150%;
+    margin: 1.5em;
 }
 
 
 p {
+    font-family: $primary-font;
+    //font-size: larger;
     color: $color-5;
     display: block;
-    margin-block-start: 0;
+    margin: 1em 2.5em 0 2.5em;
+    /*margin-block-start: 0;
     margin-block-end: 1em;
     margin-inline-start: 0;
-    margin-inline-end: 0;
+    margin-inline-end: 0;*/
   
     a {
         text-decoration: underline;
     }
 }
 
+.summary p:first-child {
+    margin-top: 35%;
+}
+
+.preamble p:first-of-type {
+    margin-top: 3.5em;
+}
+
+.explaination p:first-of-type {
+    margin-top: 1em;
+}
+
 [role="banner"] {
     margin: 0 auto;
-    padding-top: .75em;
+    //padding-top: .75em;
     text-align: center;
     height: 200px;
     width: 400px;
@@ -68,15 +85,75 @@ Also "circles" each section in the sidebar, we need to decide if we want that as
 .design-selection,
 .design-archives, 
 .zen-resources {
-    width: 200px;
-    height: 200px;
+    width: 500px;
+    height: 500px;
     border-radius: 50%;
-    padding: 5em 5em;
+    padding: 1em 1em;
     margin: 7em 25%;
     background-color: $planet4;
     overflow: auto; //hides overflowed text
     scroll-padding: 20px 0;
 }
+
+/* use class to size one planet specifically */
+/*.requirements {
+    width: 750px;
+    height: 750px;
+}*/
+
+/* doesn't seem to change much :/ 
+[role="article"]::after,
+.design-selection::after,
+.design-archives::after, 
+.zen-resources::after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+}
+
+[role="article"] p {
+    //position: absolute; //stacks p on top of each other
+    bottom: 50%;
+    width: 100%;
+    text-align: center;
+}*/
+
+/* trying to shape text inside of planets */
+/*[role="article"]::before,
+.design-selection::before,
+.design-archives::before, 
+.zen-resources::before {
+    content: '';
+    line-height: 0;
+    font-size: 0;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid #ddd;
+    border-left: 50px solid transparent;
+    border-right: 50px solid #ddd;
+    position: absolute;
+    top: 0;
+    left: -99px;
+}
+
+[role="article"]::after,
+.design-selection::after,
+.design-archives::after, 
+.zen-resources::after {
+    content: '';
+    line-height: 0;
+    font-size: 0;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid #ddd;
+    border-left: 50px solid #ddd;
+    border-right: 50px solid transparent;
+    position: absolute;
+    top: 0;
+    right: -99px;
+}*/
 
 
 
@@ -98,6 +175,18 @@ Also "circles" each section in the sidebar, we need to decide if we want that as
     h1,
     h2 {
         font-size: xx-large;
+    }
+
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: x-large;
+        margin-top: .15em;
+    }
+
+    p {
+        font-size: larger;
     }
 
     [role="article"],
