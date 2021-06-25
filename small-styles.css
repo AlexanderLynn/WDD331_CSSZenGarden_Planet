@@ -1,17 +1,122 @@
 /* Small SCSS is for mobile and tablet screens */
-.intro, #zen-supporting, .wrapper {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: (1fr)[3];
-      grid-template-rows: repeat(3, 1fr);
+@import url("https://fonts.googleapis.com/css2?family=Jura&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Forum&display=swap");
+html {
+  background-color: #002329;
+  background-image: radial-gradient(white, rgba(255, 255, 255, 0.2) 2px, transparent 20px), radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 15px), radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 20px), radial-gradient(white, rgba(255, 255, 255, 0.1) 3px, transparent 10px), radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 20px), radial-gradient(white, rgba(255, 255, 255, 0.1) 5px, transparent 40px), radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 20px), radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1) 2px, transparent 15px);
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 }
 
+/* .intro, #zen-supporting, .wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+
+
+}
 .intro:nth-child(1n), #zen-supporting:nth-child(1n), .wrapper:nth-child(1n) {
-  width: 80%;
-  height: 80%;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    border: grey solid 5px;
+} */
+html {
+  background-color: #001a1f;
+}
+
+h1,
+h2 {
+  font-family: "Forum", cursive;
+  color: #000000;
+  font-size: x-large;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Forum", cursive;
+  color: #94d2bd;
+  text-align: center;
+}
+
+p {
+  color: #000000;
+  display: block;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 1em;
+          margin-block-end: 1em;
+  -webkit-margin-start: 0;
+          margin-inline-start: 0;
+  -webkit-margin-end: 0;
+          margin-inline-end: 0;
+}
+
+p a {
+  text-decoration: underline;
+}
+
+[role="banner"] {
+  margin: 0 auto;
+  padding-top: .75em;
+  text-align: center;
+  height: 200px;
+  width: 400px;
+  border-radius: 0 0 400px 400px;
+  background-color: #ffb833;
+}
+
+/* "circles" each div with the role of "article" 
+Also "circles" each section in the sidebar, we need to decide if we want that as planets or something different. I think we decided to have them as planets though.*/
+[role="article"],
+.design-selection,
+.design-archives,
+.zen-resources {
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
-  border: grey solid 5px;
+  padding: 5em 5em;
+  margin: 7em 25%;
+  background-color: #c87741;
+  overflow: auto;
+  scroll-padding: 20px 0;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+[role="article"]::-webkit-scrollbar, .design-selection::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+[role="article"], .design-selection {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+/* ----------Large SCSS is for screens larger than tablets---------- */
+@media screen and (min-width: 900px) {
+  h1,
+  h2 {
+    font-size: xx-large;
+  }
+  [role="article"],
+  .design-selection,
+  .design-archives,
+  .zen-resources {
+    width: 450px;
+    height: 450px;
+    padding: 5em 5em;
+    margin: 5em 20%;
+    background-color: #9B2226;
+  }
+  [role="banner"] {
+    height: 300px;
+    width: 600px;
+    border-radius: 0 0 600px 600px;
+  }
 }
 /*# sourceMappingURL=small-styles.css.map */

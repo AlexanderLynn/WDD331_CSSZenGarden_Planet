@@ -73,7 +73,7 @@ xPatterns
   /* this is the container of various design elements - i.e. the 2 logo of the branding section */
   border: 1px solid #94d2bd;
   border-radius: 3px;
-  background: #000000;
+  background: #00343d;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
           box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   padding: 6px;
@@ -85,12 +85,12 @@ xNavigation
 
 -------------------------------- */
 header {
-  background-color: #efe2be;
+  background-color: #94d2bd;
 }
 
 .cd-logo {
   /* logo box style */
-  background-color: #002329;
+  background-color: #ffb833;
   width: 120px;
 }
 
@@ -146,22 +146,22 @@ header {
 
 .cd-download {
   /* download button top-right visible on big devices */
-  background-color: #f9f4e7;
+  background-color: #b8e1d3;
 }
 
 .no-touch .cd-download:hover {
-  background-color: #fefdfb;
+  background-color: #cae9de;
 }
 
 .cd-download span {
   /* tooltip */
-  background: #002329;
+  background: #f7f0de;
   color: #000000;
 }
 
 .cd-download span::before {
   /* right arrow color */
-  border-color: #002329;
+  border-color: #f7f0de;
 }
 
 /* -------------------------------- 
@@ -186,9 +186,10 @@ xTypography
 
 -------------------------------- */
 h1,
-h2 {
-  font-family: "Forum", cursive;
+h2,
+h3 {
   color: #efe2be;
+  font-family: "Jura", sans-serif;
 }
 
 h1 {
@@ -223,6 +224,10 @@ h2 {
   }
 }
 
+h3 {
+  text-transform: uppercase;
+}
+
 section > h2::before {
   /* number before each section title */
   color: #5ebb9c;
@@ -232,10 +237,11 @@ p {
   font-size: 1.4rem;
   line-height: 1.4;
   color: white;
+  font-family: "Forum", cursive;
 }
 
 p a {
-  color: #002329;
+  color: #f7f0de;
   text-decoration: underline;
 }
 
@@ -244,6 +250,10 @@ p a {
     font-size: 1.6rem;
     line-height: 1.6;
   }
+}
+
+figcaption {
+  color: #efe2be;
 }
 
 /* -------------------------------- 
@@ -256,12 +266,12 @@ xButtons
   -webkit-box-shadow: none;
           box-shadow: none;
   border-radius: 0.25em;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-family: "Forum", cursive;
   color: #000000;
   padding: 0.6em 2.2em;
   cursor: pointer;
-  background: #002329;
+  background: #c87741;
 }
 
 .btn:focus {
@@ -269,46 +279,47 @@ xButtons
 }
 
 .no-touch .btn:hover {
-  background: #003943;
+  background: #ce8555;
 }
 
 .btn.btn-success {
-  background: #6fce72;
+  background: #56b35c;
 }
 
 .no-touch .btn.btn-success:hover {
-  background: #82d485;
+  background: #68bb6d;
 }
 
 .btn.btn-alert {
-  background: #f7f0de;
+  background: #9B2226;
+  color: white;
 }
 
 .no-touch .btn.btn-alert:hover {
-  background: #fcf9f3;
+  background: #b0272b;
 }
 
 .btn.btn-outline {
-  color: #002329;
+  color: #c87741;
   background: transparent;
   -webkit-box-shadow: inset 0 0 0 1px #002329;
           box-shadow: inset 0 0 0 1px #002329;
 }
 
 .no-touch .btn.btn-outline:hover {
-  color: #000000;
-  background: #002329;
+  color: #c87741;
+  background: #ffb833;
 }
 
 @media only screen and (min-width: 768px) {
   .btn {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 }
 
 .cd-buttons .cd-box:nth-of-type(2) span {
   /* CSS class name color */
-  color: #002329;
+  color: #c87741;
 }
 
 /* -------------------------------- 
@@ -336,7 +347,13 @@ body {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
+  font-style: italic;
+  color: #c87741;
+}
+
+a:visited {
+  color: #56b35c;
 }
 
 img {
@@ -800,6 +817,7 @@ section:nth-of-type(10) h2::before {
 }
 
 .cd-colors b {
+  color: #efe2be;
   display: block;
   padding: .6em 0;
 }
