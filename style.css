@@ -3,24 +3,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Forum&display=swap");
 html {
   background-color: #002329;
-  background-image: radial-gradient(white, rgba(255, 255, 255, 0.2) 2px, transparent 20px), radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 15px), radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 20px), radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1) 2px, transparent 15px);
+  background-image: radial-gradient(white, rgba(255, 255, 255, 0.2) 2px, transparent 20px), radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 15px), radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 20px), radial-gradient(white, rgba(255, 255, 255, 0.1) 3px, transparent 10px), radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 20px), radial-gradient(white, rgba(255, 255, 255, 0.1) 5px, transparent 40px), radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 20px), radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1) 2px, transparent 15px);
   background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
   background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 }
 
-/* .intro, #zen-supporting, .wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-
-
-}
-.intro:nth-child(1n), #zen-supporting:nth-child(1n), .wrapper:nth-child(1n) {
-    width: 80%;
-    height: 80%;
-    border-radius: 50%;
-    border: grey solid 5px;
-} */
 html {
   background-color: #001a1f;
 }
@@ -48,10 +35,6 @@ p {
   color: #000000;
   display: block;
   margin: 1em 2.5em 0 2.5em;
-  /*margin-block-start: 0;
-  margin-block-end: 1em;
-  margin-inline-start: 0;
-  margin-inline-end: 0;*/
 }
 p a {
   text-decoration: underline;
@@ -94,11 +77,6 @@ Also "circles" each section in the sidebar, we need to decide if we want that as
   scroll-padding: 20px 0;
 }
 
-/* use class to size one planet specifically */
-/*.requirements {
-    width: 750px;
-    height: 750px;
-}*/
 /* doesn't seem to change much :/ 
 [role="article"]::after,
 .design-selection::after,
