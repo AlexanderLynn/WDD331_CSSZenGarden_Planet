@@ -1,0 +1,45 @@
+header  {
+	width: 500px;
+	height: 500px;
+    margin: -50% auto;
+	background-color: $planet3;
+	border-radius: 50%;
+    z-index: -20;
+	box-shadow:
+		0 0 0 20px #ffb83380,
+		0 0 0 40px #ffb83340,
+		0 0 0 60px #ffb83320,
+		0 0 0 80px #ffb83310,
+		0 0 0 100px #ffb83300,
+		0 0 40px 100px #ffb83310;
+	animation:
+		sunrise 4s infinite linear,
+		rays 2s 4s infinite linear;
+}
+
+@keyframes sunrise {
+	0% {
+		box-shadow: none;
+	}
+}
+
+@keyframes rays {
+	0% {
+		box-shadow: 
+		0 0 0 0 #FFA90A,
+		0 0 0 20px #ffb83380,
+		0 0 0 40px #ffb83340,
+		0 0 0 60px #ffb83320,
+		0 0 0 80px #ffb83310,
+		0 0 40px 100px #ffb83310;
+	}
+	100% {
+		box-shadow: 
+		0 0 0 20px #ffb83380,
+		0 0 0 40px #ffb83340,
+		0 0 0 60px #ffb83320,
+		0 0 0 80px #ffb83310,
+		0 0 0 100px #ffb83300,
+		0 0 40px 100px #ffb83310;
+	}
+}

@@ -8,19 +8,6 @@ html {
   background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 }
 
-/* .intro, #zen-supporting, .wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-
-
-}
-.intro:nth-child(1n), #zen-supporting:nth-child(1n), .wrapper:nth-child(1n) {
-    width: 80%;
-    height: 80%;
-    border-radius: 50%;
-    border: grey solid 5px;
-} */
 html {
   background-color: #001a1f;
 }
@@ -39,28 +26,35 @@ h6 {
   font-family: "Forum", cursive;
   color: #94d2bd;
   text-align: center;
+  font-size: 150%;
+  margin: 1.5em;
 }
 
 p {
+  font-family: "Jura", sans-serif;
   color: #000000;
   display: block;
-  -webkit-margin-before: 0;
-          margin-block-start: 0;
-  -webkit-margin-after: 1em;
-          margin-block-end: 1em;
-  -webkit-margin-start: 0;
-          margin-inline-start: 0;
-  -webkit-margin-end: 0;
-          margin-inline-end: 0;
+  margin: 1em 2.5em 0 2.5em;
 }
 
 p a {
   text-decoration: underline;
 }
 
+.summary p:first-child {
+  margin-top: 35%;
+}
+
+.preamble p:first-of-type {
+  margin-top: 3.5em;
+}
+
+.explaination p:first-of-type {
+  margin-top: 1em;
+}
+
 [role="banner"] {
   margin: 0 auto;
-  padding-top: .75em;
   text-align: center;
   height: 200px;
   width: 400px;
@@ -74,16 +68,68 @@ Also "circles" each section in the sidebar, we need to decide if we want that as
 .design-selection,
 .design-archives,
 .zen-resources {
-  width: 200px;
-  height: 200px;
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
-  padding: 5em 5em;
+  padding: 1em 1em;
   margin: 7em 25%;
   background-color: #c87741;
   overflow: auto;
   scroll-padding: 20px 0;
 }
 
+/* doesn't seem to change much :/ 
+[role="article"]::after,
+.design-selection::after,
+.design-archives::after, 
+.zen-resources::after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+}
+
+[role="article"] p {
+    //position: absolute; //stacks p on top of each other
+    bottom: 50%;
+    width: 100%;
+    text-align: center;
+}*/
+/* trying to shape text inside of planets */
+/*[role="article"]::before,
+.design-selection::before,
+.design-archives::before, 
+.zen-resources::before {
+    content: '';
+    line-height: 0;
+    font-size: 0;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid #ddd;
+    border-left: 50px solid transparent;
+    border-right: 50px solid #ddd;
+    position: absolute;
+    top: 0;
+    left: -99px;
+}
+
+[role="article"]::after,
+.design-selection::after,
+.design-archives::after, 
+.zen-resources::after {
+    content: '';
+    line-height: 0;
+    font-size: 0;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid #ddd;
+    border-left: 50px solid #ddd;
+    border-right: 50px solid transparent;
+    position: absolute;
+    top: 0;
+    right: -99px;
+}*/
 /* Hide scrollbar for Chrome, Safari and Opera */
 [role="article"]::-webkit-scrollbar, .design-selection::-webkit-scrollbar {
   display: none;
@@ -103,6 +149,16 @@ Also "circles" each section in the sidebar, we need to decide if we want that as
   h2 {
     font-size: xx-large;
   }
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: x-large;
+    margin-top: .15em;
+  }
+  p {
+    font-size: larger;
+  }
   [role="article"],
   .design-selection,
   .design-archives,
@@ -117,6 +173,55 @@ Also "circles" each section in the sidebar, we need to decide if we want that as
     height: 300px;
     width: 600px;
     border-radius: 0 0 600px 600px;
+  }
+}
+
+header {
+  width: 500px;
+  height: 500px;
+  margin: -50% auto;
+  background-color: #ffb833;
+  border-radius: 50%;
+  z-index: -20;
+  -webkit-box-shadow: 0 0 0 20px #ffb83380, 0 0 0 40px #ffb83340, 0 0 0 60px #ffb83320, 0 0 0 80px #ffb83310, 0 0 0 100px #ffb83300, 0 0 40px 100px #ffb83310;
+          box-shadow: 0 0 0 20px #ffb83380, 0 0 0 40px #ffb83340, 0 0 0 60px #ffb83320, 0 0 0 80px #ffb83310, 0 0 0 100px #ffb83300, 0 0 40px 100px #ffb83310;
+  -webkit-animation: sunrise 4s infinite linear, rays 2s 4s infinite linear;
+          animation: sunrise 4s infinite linear, rays 2s 4s infinite linear;
+}
+
+@-webkit-keyframes sunrise {
+  0% {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
+@keyframes sunrise {
+  0% {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
+@-webkit-keyframes rays {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 #FFA90A, 0 0 0 20px #ffb83380, 0 0 0 40px #ffb83340, 0 0 0 60px #ffb83320, 0 0 0 80px #ffb83310, 0 0 40px 100px #ffb83310;
+            box-shadow: 0 0 0 0 #FFA90A, 0 0 0 20px #ffb83380, 0 0 0 40px #ffb83340, 0 0 0 60px #ffb83320, 0 0 0 80px #ffb83310, 0 0 40px 100px #ffb83310;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 20px #ffb83380, 0 0 0 40px #ffb83340, 0 0 0 60px #ffb83320, 0 0 0 80px #ffb83310, 0 0 0 100px #ffb83300, 0 0 40px 100px #ffb83310;
+            box-shadow: 0 0 0 20px #ffb83380, 0 0 0 40px #ffb83340, 0 0 0 60px #ffb83320, 0 0 0 80px #ffb83310, 0 0 0 100px #ffb83300, 0 0 40px 100px #ffb83310;
+  }
+}
+
+@keyframes rays {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 #FFA90A, 0 0 0 20px #ffb83380, 0 0 0 40px #ffb83340, 0 0 0 60px #ffb83320, 0 0 0 80px #ffb83310, 0 0 40px 100px #ffb83310;
+            box-shadow: 0 0 0 0 #FFA90A, 0 0 0 20px #ffb83380, 0 0 0 40px #ffb83340, 0 0 0 60px #ffb83320, 0 0 0 80px #ffb83310, 0 0 40px 100px #ffb83310;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 20px #ffb83380, 0 0 0 40px #ffb83340, 0 0 0 60px #ffb83320, 0 0 0 80px #ffb83310, 0 0 0 100px #ffb83300, 0 0 40px 100px #ffb83310;
+            box-shadow: 0 0 0 20px #ffb83380, 0 0 0 40px #ffb83340, 0 0 0 60px #ffb83320, 0 0 0 80px #ffb83310, 0 0 0 100px #ffb83300, 0 0 40px 100px #ffb83310;
   }
 }
 /*# sourceMappingURL=small-styles.css.map */
