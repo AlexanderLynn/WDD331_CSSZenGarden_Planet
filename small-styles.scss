@@ -1,16 +1,25 @@
 /* Small SCSS is for mobile and tablet screens */
 @import 'partials/variables';
 @import 'partials/stars';
+@import 'partials/animations';
 
 html {
     background-color: darken($color-1, 2%); //seems too light normal but dark this way ??
 }
 
-h1,
-h2 {
-    font-family: $secondary-font;
-    color: $color-5;
-    font-size: x-large;
+
+header {
+    h1 {
+        font-family: $secondary-font;
+        color: $color-5;
+        font-size: 40px;
+    }
+    h2 {
+        font-family: $secondary-font;
+        color: $color-5;
+        font-size: 25px;
+        margin-top: -20px;
+    }
 }
 
 h3,
@@ -18,7 +27,6 @@ h4,
 h5,
 h6 {
     font-family: $secondary-font;
-    color: $color-4;
     text-align: center;
     font-size: 150%;
     margin: 1.5em;
@@ -37,11 +45,11 @@ p {
 }
 
 .summary p:first-child {
-    margin-top: 35%;
+    margin-top: 30%;
 }
 
 .preamble p:first-of-type {
-    margin-top: 3.5em;
+    margin-top: 2.5em;
 }
 
 .explaination p:first-of-type {
@@ -63,21 +71,32 @@ Also "circles" each section in the sidebar, we need to decide if we want that as
 .design-selection,
 .design-archives, 
 .zen-resources {
-    width: 500px;
-    height: 500px;
     border-radius: 50%;
-    padding: 1em 1em;
-    margin: 7em 25%;
+    width: 375px;
+    height: 375px;
+    margin: 100px auto;
     overflow: auto; //hides overflowed text
     scroll-padding: 20px 0;
 }
 
 .summary {
     background-image: url(svg/planet-1.svg);
+    p {
+        font-size: 20px;
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    }
 }
 
 .preamble {
     background-image: url(svg/planet-3.svg);
+    padding: 20px;
+    h3 {
+        color: $color-1;
+        margin-top: 95px;
+    }
 }
 
 .explanation {
@@ -86,6 +105,10 @@ Also "circles" each section in the sidebar, we need to decide if we want that as
 
 .participation {
     background-image: url(svg/planet-6.svg);
+    a {
+        text-decoration: none;
+        color: white;
+    }
 }
 
 .benefits {
@@ -94,22 +117,55 @@ Also "circles" each section in the sidebar, we need to decide if we want that as
 
 .requirements {
     background-image: url(svg/planet-4.svg);
+    a {
+        text-decoration: none;
+        color: white;
+    }
 }
 
 .design-selection {
     background-image: url(svg/planet-1.svg);
+    li {
+        font-family: $secondary-font;
+        list-style: none;
+        a {
+            text-decoration: none;
+            color: white;
+            font-family: $primary-font;
+        }
+    }
 }
 
 .design-archives {
     background-image: url(svg/planet-3.svg);
+    li {
+        list-style: none;
+        a {
+            text-decoration: none;
+            color: white;
+            font-family: $primary-font;
+        }
+    }
+
 }
 
 .zen-resources {
     background-image: url(svg/planet-4.svg);
+    li {
+        font-family: $secondary-font;
+        list-style: none;
+        a {
+            text-decoration: none;
+            color: white;
+            font-family: $primary-font;
+        }
+    }
 }
 
 footer {
     text-align: center;
+    background-color: $planet1;
+    padding: 15px;
     a {
         text-decoration: none;
         color: white;
@@ -186,9 +242,14 @@ footer {
 
 /* ----------Large SCSS is for screens larger than tablets---------- */
 @media screen and (min-width: 900px) {
-    h1,
-    h2 {
-        font-size: xx-large;
+    header {
+        h1 {
+            font-size: 45px;
+        }
+        h2 {
+            font-size: 30px;
+            margin-top: -20px;
+        }
     }
 
     h3,
@@ -210,7 +271,7 @@ footer {
         width: 450px;
         height: 450px; 
         padding: 5em 5em;
-        margin: 5em 20%;
+    
         
     }
 
@@ -219,6 +280,82 @@ footer {
         width: 600px;
         border-radius: 0 0 600px 600px;
     }
-}
 
-@import 'partials/animations';
+    .summary {
+        width: 300px;
+        height: 300px;
+        margin-left: 10%;
+        margin-top: 100px;
+        p{
+            margin: 5px 10px;
+        }
+    }
+
+    .preamble {
+        width: 500px;
+        height: 500px;
+        margin: -80px 10% 0 auto;
+        h3 {
+            margin-top: 20px;
+        }
+    }
+
+    .explanation {
+        width: 550px;
+        height: 550px;
+        margin: 50px auto 0 5%;
+    }
+
+    .participation {
+        width: 600px;
+        height: 600px;
+        margin: 50px 5% 0 auto;
+    }
+
+    .benefits {
+        width: 350px;
+        height: 350px;
+        margin: 20px auto 0 10%;
+    }
+
+    .requirements {
+        width: 700px;
+        height: 700px;
+        margin: 20px auto 100px;
+        h3 {
+            margin-top: 50px;
+        }
+    }
+
+    .design-selection {
+        width: 250px;
+        height: 250px;
+        margin: 50px auto;
+
+        h3 {
+            margin-top: -30px;
+        }
+
+
+    }
+
+    .design-archives {
+        width: 200px;
+        height: 200px;
+        margin: 50px auto;
+        h3 {
+            margin-top: -30px;
+        }
+
+    }
+
+    .zen-resources {
+        width: 200px;
+        height: 200px;
+        margin: 50px auto;
+        h3 {
+            margin-top: -30px;
+        }
+    }
+
+}

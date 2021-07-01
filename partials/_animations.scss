@@ -27,6 +27,7 @@
 
 header {
     margin: -50% auto;
+	padding: 20px;
 	background-color: $planet3;
     z-index: -20;
 	box-shadow:
@@ -39,4 +40,7 @@ header {
 	animation:
 		sunrise 4s infinite linear,
 		rays 2s 4s infinite linear;
+	abbr {
+		text-decoration: none;
+	}
 }
