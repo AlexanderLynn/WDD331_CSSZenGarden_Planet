@@ -176,19 +176,6 @@ Also "circles" each section in the sidebar, we need to decide if we want that as
   }
 }
 
-header {
-  width: 500px;
-  height: 500px;
-  margin: -50% auto;
-  background-color: #ffb833;
-  border-radius: 50%;
-  z-index: -20;
-  -webkit-box-shadow: 0 0 0 20px #ffb83380, 0 0 0 40px #ffb83340, 0 0 0 60px #ffb83320, 0 0 0 80px #ffb83310, 0 0 0 100px #ffb83300, 0 0 40px 100px #ffb83310;
-          box-shadow: 0 0 0 20px #ffb83380, 0 0 0 40px #ffb83340, 0 0 0 60px #ffb83320, 0 0 0 80px #ffb83310, 0 0 0 100px #ffb83300, 0 0 40px 100px #ffb83310;
-  -webkit-animation: sunrise 4s infinite linear, rays 2s 4s infinite linear;
-          animation: sunrise 4s infinite linear, rays 2s 4s infinite linear;
-}
-
 @-webkit-keyframes sunrise {
   0% {
     -webkit-box-shadow: none;
@@ -223,5 +210,15 @@ header {
     -webkit-box-shadow: 0 0 0 20px #ffb83380, 0 0 0 40px #ffb83340, 0 0 0 60px #ffb83320, 0 0 0 80px #ffb83310, 0 0 0 100px #ffb83300, 0 0 40px 100px #ffb83310;
             box-shadow: 0 0 0 20px #ffb83380, 0 0 0 40px #ffb83340, 0 0 0 60px #ffb83320, 0 0 0 80px #ffb83310, 0 0 0 100px #ffb83300, 0 0 40px 100px #ffb83310;
   }
+}
+
+header {
+  margin: -50% auto;
+  background-color: #ffb833;
+  z-index: -20;
+  -webkit-box-shadow: 0 0 0 20px #ffb83380, 0 0 0 40px #ffb83340, 0 0 0 60px #ffb83320, 0 0 0 80px #ffb83310, 0 0 0 100px #ffb83300, 0 0 40px 100px #ffb83310;
+          box-shadow: 0 0 0 20px #ffb83380, 0 0 0 40px #ffb83340, 0 0 0 60px #ffb83320, 0 0 0 80px #ffb83310, 0 0 0 100px #ffb83300, 0 0 40px 100px #ffb83310;
+  -webkit-animation: sunrise 4s infinite linear, rays 2s 4s infinite linear;
+          animation: sunrise 4s infinite linear, rays 2s 4s infinite linear;
 }
 /*# sourceMappingURL=small-styles.css.map */
