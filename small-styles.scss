@@ -68,9 +68,55 @@ Also "circles" each section in the sidebar, we need to decide if we want that as
     border-radius: 50%;
     padding: 1em 1em;
     margin: 7em 25%;
-    background-color: $planet4;
     overflow: auto; //hides overflowed text
     scroll-padding: 20px 0;
+}
+
+.summary {
+    background-image: url(svg/planet-1.svg);
+}
+
+.preamble {
+    background-image: url(svg/planet-3.svg);
+}
+
+.explanation {
+    background-image: url(svg/planet-5.svg);
+}
+
+.participation {
+    background-image: url(svg/planet-6.svg);
+}
+
+.benefits {
+    background-image: url(svg/planet-7.svg);
+}
+
+.requirements {
+    background-image: url(svg/planet-4.svg);
+}
+
+.design-selection {
+    background-image: url(svg/planet-1.svg);
+}
+
+.design-archives {
+    background-image: url(svg/planet-3.svg);
+}
+
+.zen-resources {
+    background-image: url(svg/planet-4.svg);
+}
+
+footer {
+    text-align: center;
+    a {
+        text-decoration: none;
+        color: white;
+        margin: 20px;
+        font-family: $primary-font;
+        font-size: 25px;
+    }
 }
 
 /* doesn't seem to change much :/ 
@@ -165,7 +211,7 @@ Also "circles" each section in the sidebar, we need to decide if we want that as
         height: 450px; 
         padding: 5em 5em;
         margin: 5em 20%;
-        background-color: $planet1;
+        
     }
 
     [role="banner"] {
