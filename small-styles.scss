@@ -72,17 +72,20 @@ Also "circles" each section in the sidebar, we need to decide if we want that as
 .design-archives, 
 .zen-resources {
     border-radius: 50%;
-    width: 375px;
-    height: 375px;
+    width: 300px;
+    height: 300px;
     margin: 100px auto;
     overflow: auto; //hides overflowed text
-    scroll-padding: 20px 0;
+    padding: 70px;
+    
+
 }
 
 .summary {
     background-image: url(svg/planet-1.svg);
+    padding-top: -10px;
     p {
-        font-size: 20px;
+        font-size: 18px;
         a{
             text-decoration: none;
             color: white;
@@ -92,10 +95,9 @@ Also "circles" each section in the sidebar, we need to decide if we want that as
 
 .preamble {
     background-image: url(svg/planet-3.svg);
-    padding: 20px;
+
     h3 {
         color: $color-1;
-        margin-top: 95px;
     }
 }
 
@@ -171,7 +173,7 @@ footer {
         color: white;
         margin: 20px;
         font-family: $primary-font;
-        font-size: 25px;
+        font-size: 20px;
     }
 }
 
@@ -228,6 +230,7 @@ footer {
     top: 0;
     right: -99px;
 }*/
+
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 [role="article"]::-webkit-scrollbar, .design-selection::-webkit-scrollbar {
@@ -322,15 +325,16 @@ footer {
         width: 700px;
         height: 700px;
         margin: 20px auto 100px;
+        padding: 130px;
         h3 {
-            margin-top: 50px;
+            margin-top: -30px;
         }
     }
 
     .design-selection {
         width: 250px;
         height: 250px;
-        margin: 50px auto;
+        margin: 100px auto 50px 100px;
 
         h3 {
             margin-top: -30px;
@@ -352,7 +356,7 @@ footer {
     .zen-resources {
         width: 200px;
         height: 200px;
-        margin: 50px auto;
+        margin: 50px 100px 100px auto;
         h3 {
             margin-top: -30px;
         }
