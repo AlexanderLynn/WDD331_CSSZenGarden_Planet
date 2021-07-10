@@ -56,36 +56,37 @@ h6 {
   font-family: "Forum", cursive;
   text-align: center;
   font-size: 150%;
-  margin: 0 1.5em 0.5em 1.5em;
+  margin: 1.5em;
 }
 
 a {
-  font-family: "Jura", sans-serif;
   text-decoration: none;
-  font-size: large;
+  font-weight: 400;
   color: white;
 }
-a:hover {
-  text-decoration: underline;
+a :hover {
+  font-size: 150%;
 }
 
 p {
   font-family: "Jura", sans-serif;
   color: #000000;
   display: block;
+  margin: 1em 2.5em 0 2.5em;
 }
 
 .summary p:first-child {
-  margin-top: 25%;
+  margin-top: 30%;
 }
 
-/*.preamble p:first-of-type {
-    margin-top: 1.5em;
+.preamble p:first-of-type {
+  margin-top: 2.5em;
 }
 
 .explaination p:first-of-type {
-    margin-top: 1em;
-}*/
+  margin-top: 1em;
+}
+
 [role=banner] {
   margin: 0 auto;
   text-align: center;
@@ -97,43 +98,16 @@ p {
 
 /* "circles" each div with the role of "article" 
 Also "circles" each section in the sidebar, we need to decide if we want that as planets or something different. I think we decided to have them as planets though.*/
-[role=article] {
-  border-radius: 50%;
-  width: 325px;
-  height: 325px;
-  margin: 100px auto;
-  overflow: auto;
-  padding: 70px;
-}
-[role=article] h3 {
-  margin-top: -30px;
-}
-
+[role=article],
 .design-selection,
 .design-archives,
-.zen-resources,
-footer {
+.zen-resources {
   border-radius: 50%;
-  width: 255px;
-  height: 255px;
+  width: 300px;
+  height: 300px;
   margin: 100px auto;
   overflow: auto;
   padding: 70px;
-}
-.design-selection h3,
-.design-archives h3,
-.zen-resources h3,
-footer h3 {
-  margin-top: -35px;
-  margin-bottom: 0;
-}
-.design-selection ul,
-.design-archives ul,
-.zen-resources ul,
-footer ul {
-  padding-left: 10px;
-  margin-top: 10px;
-  margin-bottom: 0;
 }
 
 .summary {
@@ -141,7 +115,7 @@ footer ul {
   padding-top: -10px;
 }
 .summary p {
-  margin: 0;
+  font-size: 18px;
   /*a{
       text-decoration: none;
       color: white;
@@ -151,15 +125,12 @@ footer ul {
 .preamble {
   background-image: url(svg/planet-3.svg);
 }
-.preamble p {
-  margin: 5px 0;
+.preamble h3 {
+  color: #002329;
 }
 
 .explanation {
   background-image: url(svg/planet-5.svg);
-}
-.explanation p {
-  margin: 5px 0;
 }
 
 .participation {
@@ -169,15 +140,9 @@ footer ul {
       color: white;
   }*/
 }
-.participation p {
-  margin: 5px 0;
-}
 
 .benefits {
   background-image: url(svg/planet-7.svg);
-}
-.benefits p {
-  margin: 5px 0;
 }
 
 .requirements {
@@ -186,9 +151,6 @@ footer ul {
       text-decoration: none;
       color: white;
   }*/
-}
-.requirements p {
-  margin: 5px 0;
 }
 
 .design-selection {
@@ -209,6 +171,11 @@ footer ul {
 }
 .design-archives li {
   list-style: none;
+  /*a {
+      text-decoration: none;
+      color: white;
+      font-family: $primary-font;
+  }*/
 }
 
 .zen-resources {
@@ -217,15 +184,24 @@ footer ul {
 .zen-resources li {
   font-family: "Forum", cursive;
   list-style: none;
+  /*a {
+      text-decoration: none;
+      color: white;
+      font-family: $primary-font;
+  }*/
 }
 
 footer {
   text-align: center;
-  background-image: url(svg/planet-4.svg);
-}
-footer a {
-  margin: 75px;
-  font-size: 20px;
+  background-color: #9B2226;
+  padding: 15px;
+  /*a {
+      text-decoration: none;
+      color: white;
+      margin: 20px;
+      font-family: $primary-font;
+      font-size: 20px;
+  }*/
 }
 
 /* doesn't seem to change much :/ 
@@ -307,7 +283,7 @@ footer a {
 h4,
 h5,
 h6 {
-    font-size: 175%;
+    font-size: x-large;
     margin-top: 0.15em;
   }
 
@@ -362,14 +338,14 @@ h6 {
   }
 
   .benefits {
-    width: 355px;
-    height: 355px;
+    width: 350px;
+    height: 350px;
     margin: 20px auto 0 10%;
   }
 
   .requirements {
-    width: 725px;
-    height: 725px;
+    width: 700px;
+    height: 700px;
     margin: 20px auto 100px;
     padding: 130px;
   }
@@ -377,13 +353,9 @@ h6 {
     margin-top: -30px;
   }
 
-  footer a {
-    font-size: 25px;
-  }
-
   .design-selection {
-    width: 305px;
-    height: 305px;
+    width: 250px;
+    height: 250px;
     margin: 100px auto 50px 100px;
   }
   .design-selection h3 {
@@ -398,21 +370,15 @@ h6 {
   .design-archives h3 {
     margin-top: -30px;
   }
-  .design-archives ul {
-    padding-left: 16px;
-  }
 
   .zen-resources {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     margin: 50px 100px 100px auto;
   }
   .zen-resources h3 {
     margin-top: -30px;
   }
-  .zen-resources ul {
-    padding-left: 16px;
-  }
 }
 
-/*# sourceMappingURL=small-styles.css.map */
+/*# sourceMappingURL=small-style.css.map */

@@ -8,15 +8,45 @@ html {
   background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 }
 
+@keyframes sunrise {
+  0% {
+    box-shadow: none;
+  }
+}
+@keyframes rays {
+  0% {
+    box-shadow: 0 0 0 0 #FFA90A, 0 0 0 20px #ffb83380, 0 0 0 40px #ffb83340, 0 0 0 60px #ffb83320, 0 0 0 80px #ffb83310, 0 0 40px 100px #ffb83310;
+  }
+  100% {
+    box-shadow: 0 0 0 20px #ffb83380, 0 0 0 40px #ffb83340, 0 0 0 60px #ffb83320, 0 0 0 80px #ffb83310, 0 0 0 100px #ffb83300, 0 0 40px 100px #ffb83310;
+  }
+}
+header {
+  margin: -50% auto;
+  padding: 20px;
+  background-color: #ffb833;
+  z-index: -20;
+  box-shadow: 0 0 0 20px #ffb83380, 0 0 0 40px #ffb83340, 0 0 0 60px #ffb83320, 0 0 0 80px #ffb83310, 0 0 0 100px #ffb83300, 0 0 40px 100px #ffb83310;
+  animation: sunrise 4s infinite linear, rays 2s 4s infinite linear;
+}
+header abbr {
+  text-decoration: none;
+}
+
 html {
   background-color: #001a1f;
 }
 
-h1,
-h2 {
+header h1 {
   font-family: "Forum", cursive;
   color: #000000;
-  font-size: x-large;
+  font-size: 40px;
+}
+header h2 {
+  font-family: "Forum", cursive;
+  color: #000000;
+  font-size: 25px;
+  margin-top: -20px;
 }
 
 h3,
@@ -24,10 +54,18 @@ h4,
 h5,
 h6 {
   font-family: "Forum", cursive;
-  color: #94d2bd;
   text-align: center;
   font-size: 150%;
   margin: 1.5em;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 400;
+  color: white;
+}
+a :hover {
+  font-size: 150%;
 }
 
 p {
@@ -36,16 +74,13 @@ p {
   display: block;
   margin: 1em 2.5em 0 2.5em;
 }
-p a {
-  text-decoration: underline;
-}
 
 .summary p:first-child {
-  margin-top: 35%;
+  margin-top: 30%;
 }
 
 .preamble p:first-of-type {
-  margin-top: 3.5em;
+  margin-top: 2.5em;
 }
 
 .explaination p:first-of-type {
@@ -67,14 +102,106 @@ Also "circles" each section in the sidebar, we need to decide if we want that as
 .design-selection,
 .design-archives,
 .zen-resources {
-  width: 500px;
-  height: 500px;
   border-radius: 50%;
-  padding: 1em 1em;
-  margin: 7em 25%;
-  background-color: #c87741;
+  width: 300px;
+  height: 300px;
+  margin: 100px auto;
   overflow: auto;
-  scroll-padding: 20px 0;
+  padding: 70px;
+}
+
+.summary {
+  background-image: url(svg/planet-1.svg);
+  padding-top: -10px;
+}
+.summary p {
+  font-size: 18px;
+  /*a{
+      text-decoration: none;
+      color: white;
+  }*/
+}
+
+.preamble {
+  background-image: url(svg/planet-3.svg);
+}
+.preamble h3 {
+  color: #002329;
+}
+
+.explanation {
+  background-image: url(svg/planet-5.svg);
+}
+
+.participation {
+  background-image: url(svg/planet-6.svg);
+  /*a {
+      text-decoration: none;
+      color: white;
+  }*/
+}
+
+.benefits {
+  background-image: url(svg/planet-7.svg);
+}
+
+.requirements {
+  background-image: url(svg/planet-5.svg);
+  /*a {
+      text-decoration: none;
+      color: white;
+  }*/
+}
+
+.design-selection {
+  background-image: url(svg/planet-1.svg);
+}
+.design-selection li {
+  font-family: "Forum", cursive;
+  list-style: none;
+  /*a {
+      text-decoration: none;
+      color: white;
+      font-family: $primary-font;
+  }*/
+}
+
+.design-archives {
+  background-image: url(svg/planet-3.svg);
+}
+.design-archives li {
+  list-style: none;
+  /*a {
+      text-decoration: none;
+      color: white;
+      font-family: $primary-font;
+  }*/
+}
+
+.zen-resources {
+  background-image: url(svg/planet-4.svg);
+}
+.zen-resources li {
+  font-family: "Forum", cursive;
+  list-style: none;
+  /*a {
+      text-decoration: none;
+      color: white;
+      font-family: $primary-font;
+  }*/
+}
+
+footer {
+  text-align: center;
+  background-color: #9B2226;
+  padding: 15px;
+  /*a {
+      text-decoration: none;
+      color: white;
+      margin: 20px;
+      font-family: $primary-font;
+      font-size: 20px;
+  }*/
 }
 
 /* doesn't seem to change much :/ 
@@ -144,9 +271,12 @@ Also "circles" each section in the sidebar, we need to decide if we want that as
 
 /* ----------Large SCSS is for screens larger than tablets---------- */
 @media screen and (min-width: 900px) {
-  h1,
-h2 {
-    font-size: xx-large;
+  header h1 {
+    font-size: 45px;
+  }
+  header h2 {
+    font-size: 30px;
+    margin-top: -20px;
   }
 
   h3,
@@ -168,14 +298,86 @@ h6 {
     width: 450px;
     height: 450px;
     padding: 5em 5em;
-    margin: 5em 20%;
-    background-color: #9B2226;
   }
 
   [role=banner] {
     height: 300px;
     width: 600px;
     border-radius: 0 0 600px 600px;
+  }
+
+  .summary {
+    width: 300px;
+    height: 300px;
+    margin-left: 10%;
+    margin-top: 100px;
+  }
+  .summary p {
+    margin: 5px 10px;
+  }
+
+  .preamble {
+    width: 500px;
+    height: 500px;
+    margin: -80px 10% 0 auto;
+  }
+  .preamble h3 {
+    margin-top: 20px;
+  }
+
+  .explanation {
+    width: 550px;
+    height: 550px;
+    margin: 50px auto 0 5%;
+  }
+
+  .participation {
+    width: 600px;
+    height: 600px;
+    margin: 50px 5% 0 auto;
+  }
+
+  .benefits {
+    width: 350px;
+    height: 350px;
+    margin: 20px auto 0 10%;
+  }
+
+  .requirements {
+    width: 700px;
+    height: 700px;
+    margin: 20px auto 100px;
+    padding: 130px;
+  }
+  .requirements h3 {
+    margin-top: -30px;
+  }
+
+  .design-selection {
+    width: 250px;
+    height: 250px;
+    margin: 100px auto 50px 100px;
+  }
+  .design-selection h3 {
+    margin-top: -30px;
+  }
+
+  .design-archives {
+    width: 200px;
+    height: 200px;
+    margin: 50px auto;
+  }
+  .design-archives h3 {
+    margin-top: -30px;
+  }
+
+  .zen-resources {
+    width: 200px;
+    height: 200px;
+    margin: 50px 100px 100px auto;
+  }
+  .zen-resources h3 {
+    margin-top: -30px;
   }
 }
 

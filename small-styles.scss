@@ -29,32 +29,37 @@ h6 {
     font-family: $secondary-font;
     text-align: center;
     font-size: 150%;
-    margin: 1.5em;
+    margin: 0 1.5em .5em 1.5em;
 }
 
+a {
+    font-family: $primary-font;
+    text-decoration: none;
+    font-size: large;
+    color: white;
+    &:hover {
+        text-decoration: underline;
+    }
+}
 
 p {
     font-family: $primary-font;
     color: $color-5;
     display: block;
-    margin: 1em 2.5em 0 2.5em;
-  
-    a {
-        text-decoration: underline;
-    }
+    //margin: .5em 2.5em 0 2.5em;
 }
 
 .summary p:first-child {
-    margin-top: 30%;
+    margin-top: 25%;
 }
 
-.preamble p:first-of-type {
-    margin-top: 2.5em;
+/*.preamble p:first-of-type {
+    margin-top: 1.5em;
 }
 
 .explaination p:first-of-type {
     margin-top: 1em;
-}
+}*/
 
 [role="banner"] {
     margin: 0 auto;
@@ -67,62 +72,93 @@ p {
 
 /* "circles" each div with the role of "article" 
 Also "circles" each section in the sidebar, we need to decide if we want that as planets or something different. I think we decided to have them as planets though.*/
-[role="article"],
-.design-selection,
-.design-archives, 
-.zen-resources {
+[role="article"] {
     border-radius: 50%;
-    width: 300px;
-    height: 300px;
+    width: 325px;
+    height: 325px;
     margin: 100px auto;
     overflow: auto; //hides overflowed text
     padding: 70px;
-    
+    h3 {
+        margin-top: -30px;
+    }
+}
 
+.design-selection,
+.design-archives, 
+.zen-resources,
+footer {
+    border-radius: 50%;
+    width: 255px;
+    height: 255px;
+    margin: 100px auto;
+    overflow: auto; //hides overflowed text
+    padding: 70px;
+    h3 {
+        margin-top: -35px;
+        margin-bottom: 0;
+    }
+    ul {
+        padding-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
 }
 
 .summary {
     background-image: url(svg/planet-1.svg);
     padding-top: -10px;
     p {
-        font-size: 18px;
-        a{
+        margin: 0;
+        //font-size: 18px;
+        /*a{
             text-decoration: none;
             color: white;
-        }
+        }*/
     }
 }
 
 .preamble {
     background-image: url(svg/planet-3.svg);
-
-    h3 {
-        color: $color-1;
+    p {
+        margin: 5px 0;
     }
 }
 
 .explanation {
     background-image: url(svg/planet-5.svg);
+    p {
+        margin: 5px 0;
+    }
 }
 
 .participation {
     background-image: url(svg/planet-6.svg);
-    a {
+    p {
+        margin: 5px 0;
+    }
+    /*a {
         text-decoration: none;
         color: white;
-    }
+    }*/
 }
 
 .benefits {
     background-image: url(svg/planet-7.svg);
+    p {
+        margin: 5px 0;
+    }
 }
 
 .requirements {
-    background-image: url(svg/planet-4.svg);
-    a {
+    background-image: url(svg/planet-5.svg);
+    p {
+        margin: 5px 0;
+    }
+    /*a {
         text-decoration: none;
         color: white;
-    }
+    }*/
 }
 
 .design-selection {
@@ -130,11 +166,11 @@ Also "circles" each section in the sidebar, we need to decide if we want that as
     li {
         font-family: $secondary-font;
         list-style: none;
-        a {
+        /*a {
             text-decoration: none;
             color: white;
             font-family: $primary-font;
-        }
+        }*/
     }
 }
 
@@ -142,11 +178,6 @@ Also "circles" each section in the sidebar, we need to decide if we want that as
     background-image: url(svg/planet-3.svg);
     li {
         list-style: none;
-        a {
-            text-decoration: none;
-            color: white;
-            font-family: $primary-font;
-        }
     }
 
 }
@@ -156,23 +187,14 @@ Also "circles" each section in the sidebar, we need to decide if we want that as
     li {
         font-family: $secondary-font;
         list-style: none;
-        a {
-            text-decoration: none;
-            color: white;
-            font-family: $primary-font;
-        }
     }
 }
 
 footer {
     text-align: center;
-    background-color: $planet1;
-    padding: 15px;
+    background-image: url(svg/planet-4.svg);
     a {
-        text-decoration: none;
-        color: white;
-        margin: 20px;
-        font-family: $primary-font;
+        margin: 75px;
         font-size: 20px;
     }
 }
@@ -259,7 +281,7 @@ footer {
     h4,
     h5,
     h6 {
-        font-size: x-large;
+        font-size: 175%;
         margin-top: .15em;
     }
 
@@ -316,14 +338,14 @@ footer {
     }
 
     .benefits {
-        width: 350px;
-        height: 350px;
+        width: 355px;
+        height: 355px;
         margin: 20px auto 0 10%;
     }
 
     .requirements {
-        width: 700px;
-        height: 700px;
+        width: 725px;
+        height: 725px;
         margin: 20px auto 100px;
         padding: 130px;
         h3 {
@@ -331,11 +353,14 @@ footer {
         }
     }
 
-    .design-selection {
-        width: 250px;
-        height: 250px;
-        margin: 100px auto 50px 100px;
+    footer a {
+        font-size: 25px;
+    }
 
+    .design-selection {
+        width: 305px;
+        height: 305px;
+        margin: 100px auto 50px 100px;
         h3 {
             margin-top: -30px;
         }
@@ -350,15 +375,21 @@ footer {
         h3 {
             margin-top: -30px;
         }
+        ul {
+            padding-left: 16px;
+        }
 
     }
 
     .zen-resources {
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
         margin: 50px 100px 100px auto;
         h3 {
             margin-top: -30px;
+        }
+        ul {
+            padding-left: 16px;
         }
     }
 
