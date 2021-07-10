@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,mDAAmD;AACnD,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,IAAI;GAC9B,AAAA,AAAA,IAAC,CAAK,SAAS,AAAd;EACD,iBAAiB;EACjB,gBAAgB;EAChB,cAAc,CAAC;IACX,KAAK,EAAE,GAAG;IAEV,aAAa,EAAE,GAAG;IAClB,MAAM,EAAE,cAAc;IACtB,OAAO,EAAE,OAAO;IAChB,MAAM,EAAE,OAAO;GAClB",
-    "sources": [
-        "large-styles.scss"
-    ],
-    "names": [],
-    "file": "large-styles.css"
-}
