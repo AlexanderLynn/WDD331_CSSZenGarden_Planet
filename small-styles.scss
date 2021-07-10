@@ -46,20 +46,12 @@ p {
     font-family: $primary-font;
     color: $color-5;
     display: block;
-    //margin: .5em 2.5em 0 2.5em;
+    margin: 5px 0;
 }
 
 .summary p:first-child {
     margin-top: 25%;
 }
-
-/*.preamble p:first-of-type {
-    margin-top: 1.5em;
-}
-
-.explaination p:first-of-type {
-    margin-top: 1em;
-}*/
 
 [role="banner"] {
     margin: 0 auto;
@@ -74,13 +66,13 @@ p {
 Also "circles" each section in the sidebar, we need to decide if we want that as planets or something different. I think we decided to have them as planets though.*/
 [role="article"] {
     border-radius: 50%;
-    width: 325px;
-    height: 325px;
+    width: 335px;
+    height: 335px;
     margin: 100px auto;
     overflow: auto; //hides overflowed text
     padding: 70px;
     h3 {
-        margin-top: -30px;
+        margin-top: -25px;
     }
 }
 
@@ -88,6 +80,26 @@ Also "circles" each section in the sidebar, we need to decide if we want that as
 .design-archives, 
 .zen-resources,
 footer {
+    border-radius: 50%;
+    width: 255px;
+    height: 255px;
+    margin: 100px auto;
+    overflow: auto; //hides overflowed text
+    padding: 70px;
+    h3 {
+        margin-top: -25px;
+        margin-bottom: 0;
+    }
+    ul {
+        padding-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+}
+
+.summary {
+    background-image: url(svg/planet-1.svg);
+    padding-top: -10px;
     border-radius: 50%;
     width: 255px;
     height: 255px;
@@ -105,60 +117,41 @@ footer {
     }
 }
 
-.summary {
-    background-image: url(svg/planet-1.svg);
-    padding-top: -10px;
-    p {
-        margin: 0;
-        //font-size: 18px;
-        /*a{
-            text-decoration: none;
-            color: white;
-        }*/
-    }
-}
-
 .preamble {
     background-image: url(svg/planet-3.svg);
-    p {
-        margin: 5px 0;
-    }
 }
 
 .explanation {
     background-image: url(svg/planet-5.svg);
-    p {
-        margin: 5px 0;
-    }
 }
 
+// Problem child!!!!!!!!
 .participation {
     background-image: url(svg/planet-6.svg);
-    p {
-        margin: 5px 0;
-    }
-    /*a {
-        text-decoration: none;
-        color: white;
-    }*/
 }
 
 .benefits {
     background-image: url(svg/planet-7.svg);
-    p {
-        margin: 5px 0;
+    border-radius: 50%;
+    width: 255px;
+    height: 255px;
+    margin: 100px auto;
+    overflow: auto; //hides overflowed text
+    padding: 70px;
+    h3 {
+        margin-top: -35px;
+        margin-bottom: 0;
+    }
+    ul {
+        padding-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 0;
     }
 }
 
+// Problem child!!!!!!!!
 .requirements {
     background-image: url(svg/planet-5.svg);
-    p {
-        margin: 5px 0;
-    }
-    /*a {
-        text-decoration: none;
-        color: white;
-    }*/
 }
 
 .design-selection {
@@ -166,11 +159,6 @@ footer {
     li {
         font-family: $secondary-font;
         list-style: none;
-        /*a {
-            text-decoration: none;
-            color: white;
-            font-family: $primary-font;
-        }*/
     }
 }
 
@@ -179,11 +167,10 @@ footer {
     li {
         list-style: none;
     }
-
 }
 
 .zen-resources {
-    background-image: url(svg/planet-4.svg);
+    background-image: url(svg/planet-7.svg);
     li {
         font-family: $secondary-font;
         list-style: none;
@@ -198,61 +185,6 @@ footer {
         font-size: 20px;
     }
 }
-
-/* doesn't seem to change much :/ 
-[role="article"]::after,
-.design-selection::after,
-.design-archives::after, 
-.zen-resources::after {
-    content: '';
-    display: block;
-    padding-bottom: 100%;
-}
-
-[role="article"] p {
-    //position: absolute; //stacks p on top of each other
-    bottom: 50%;
-    width: 100%;
-    text-align: center;
-}*/
-
-/* trying to shape text inside of planets */
-/*[role="article"]::before,
-.design-selection::before,
-.design-archives::before, 
-.zen-resources::before {
-    content: '';
-    line-height: 0;
-    font-size: 0;
-    width: 0;
-    height: 0;
-    border-top: 50px solid transparent;
-    border-bottom: 50px solid #ddd;
-    border-left: 50px solid transparent;
-    border-right: 50px solid #ddd;
-    position: absolute;
-    top: 0;
-    left: -99px;
-}
-
-[role="article"]::after,
-.design-selection::after,
-.design-archives::after, 
-.zen-resources::after {
-    content: '';
-    line-height: 0;
-    font-size: 0;
-    width: 0;
-    height: 0;
-    border-top: 50px solid transparent;
-    border-bottom: 50px solid #ddd;
-    border-left: 50px solid #ddd;
-    border-right: 50px solid transparent;
-    position: absolute;
-    top: 0;
-    right: -99px;
-}*/
-
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 [role="article"]::-webkit-scrollbar, .design-selection::-webkit-scrollbar {
@@ -282,11 +214,13 @@ footer {
     h5,
     h6 {
         font-size: 175%;
-        margin-top: .15em;
+        margin-top: 50px;
+        margin-bottom: 30px;
     }
 
     p {
         font-size: larger;
+        padding: 15px 0 0 10px;
     }
 
     [role="article"],
@@ -311,7 +245,10 @@ footer {
         height: 300px;
         margin-left: 10%;
         margin-top: 100px;
-        p{
+        p:first-child {
+            margin-top: 10%;
+        }
+        p {
             margin: 5px 10px;
         }
     }
@@ -328,69 +265,67 @@ footer {
     .explanation {
         width: 550px;
         height: 550px;
-        margin: 50px auto 0 5%;
+        margin: 50px auto 50px 5%;
     }
 
     .participation {
         width: 600px;
         height: 600px;
-        margin: 50px 5% 0 auto;
+        margin: 50px 5% 50px auto;
     }
 
     .benefits {
         width: 355px;
         height: 355px;
-        margin: 20px auto 0 10%;
+        margin: 50px auto 50px 10%;
     }
 
     .requirements {
         width: 725px;
         height: 725px;
-        margin: 20px auto 100px;
+        margin: 50px 100px 0 auto;
         padding: 130px;
-        h3 {
-            margin-top: -30px;
-        }
     }
 
-    footer a {
-        font-size: 25px;
+    footer {
+        width: 250px;
+        height: 250px;
+        margin: 0 auto 50px 200px;
+        a {
+            font-size: 25px;
+        }
     }
 
     .design-selection {
         width: 305px;
         height: 305px;
-        margin: 100px auto 50px 100px;
-        h3 {
-            margin-top: -30px;
+        margin: 50px auto;
+        li {
+            padding: 2.5px 0;
         }
-
-
     }
 
     .design-archives {
         width: 200px;
         height: 200px;
-        margin: 50px auto;
-        h3 {
-            margin-top: -30px;
-        }
+        margin: 50px 100px 50px auto;
         ul {
             padding-left: 16px;
         }
-
+        li {
+            padding: 2.5px 0;
+        }
     }
 
     .zen-resources {
         width: 250px;
         height: 250px;
-        margin: 50px 100px 100px auto;
-        h3 {
-            margin-top: -30px;
-        }
+        margin: 50px auto;
         ul {
             padding-left: 16px;
         }
+        li {
+            padding: 2.5px 0;
+        }
     }
-
 }
