@@ -8,27 +8,53 @@ html {
   background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 }
 
+@-webkit-keyframes sunrise {
+  0% {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
 @keyframes sunrise {
   0% {
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
 }
-@keyframes rays {
+
+@-webkit-keyframes rays {
   0% {
-    box-shadow: 0 0 0 0 #FFA90A, 0 0 0 20px #ffb83380, 0 0 0 40px #ffb83340, 0 0 0 60px #ffb83320, 0 0 0 80px #ffb83310, 0 0 40px 100px #ffb83310;
+    -webkit-box-shadow: 0 0 0 0 #FFA90A, 0 0 0 20px #ffb83380, 0 0 0 40px #ffb83340, 0 0 0 60px #ffb83320, 0 0 0 80px #ffb83310, 0 0 40px 100px #ffb83310;
+            box-shadow: 0 0 0 0 #FFA90A, 0 0 0 20px #ffb83380, 0 0 0 40px #ffb83340, 0 0 0 60px #ffb83320, 0 0 0 80px #ffb83310, 0 0 40px 100px #ffb83310;
   }
   100% {
-    box-shadow: 0 0 0 20px #ffb83380, 0 0 0 40px #ffb83340, 0 0 0 60px #ffb83320, 0 0 0 80px #ffb83310, 0 0 0 100px #ffb83300, 0 0 40px 100px #ffb83310;
+    -webkit-box-shadow: 0 0 0 20px #ffb83380, 0 0 0 40px #ffb83340, 0 0 0 60px #ffb83320, 0 0 0 80px #ffb83310, 0 0 0 100px #ffb83300, 0 0 40px 100px #ffb83310;
+            box-shadow: 0 0 0 20px #ffb83380, 0 0 0 40px #ffb83340, 0 0 0 60px #ffb83320, 0 0 0 80px #ffb83310, 0 0 0 100px #ffb83300, 0 0 40px 100px #ffb83310;
   }
 }
+
+@keyframes rays {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 #FFA90A, 0 0 0 20px #ffb83380, 0 0 0 40px #ffb83340, 0 0 0 60px #ffb83320, 0 0 0 80px #ffb83310, 0 0 40px 100px #ffb83310;
+            box-shadow: 0 0 0 0 #FFA90A, 0 0 0 20px #ffb83380, 0 0 0 40px #ffb83340, 0 0 0 60px #ffb83320, 0 0 0 80px #ffb83310, 0 0 40px 100px #ffb83310;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 20px #ffb83380, 0 0 0 40px #ffb83340, 0 0 0 60px #ffb83320, 0 0 0 80px #ffb83310, 0 0 0 100px #ffb83300, 0 0 40px 100px #ffb83310;
+            box-shadow: 0 0 0 20px #ffb83380, 0 0 0 40px #ffb83340, 0 0 0 60px #ffb83320, 0 0 0 80px #ffb83310, 0 0 0 100px #ffb83300, 0 0 40px 100px #ffb83310;
+  }
+}
+
 header {
   margin: -50% auto;
   padding: 20px;
   background-color: #ffb833;
   z-index: -20;
-  box-shadow: 0 0 0 20px #ffb83380, 0 0 0 40px #ffb83340, 0 0 0 60px #ffb83320, 0 0 0 80px #ffb83310, 0 0 0 100px #ffb83300, 0 0 40px 100px #ffb83310;
-  animation: sunrise 4s infinite linear, rays 2s 4s infinite linear;
+  -webkit-box-shadow: 0 0 0 20px #ffb83380, 0 0 0 40px #ffb83340, 0 0 0 60px #ffb83320, 0 0 0 80px #ffb83310, 0 0 0 100px #ffb83300, 0 0 40px 100px #ffb83310;
+          box-shadow: 0 0 0 20px #ffb83380, 0 0 0 40px #ffb83340, 0 0 0 60px #ffb83320, 0 0 0 80px #ffb83310, 0 0 0 100px #ffb83300, 0 0 40px 100px #ffb83310;
+  -webkit-animation: sunrise 4s infinite linear, rays 2s 4s infinite linear;
+          animation: sunrise 4s infinite linear, rays 2s 4s infinite linear;
 }
+
 header abbr {
   text-decoration: none;
 }
@@ -42,6 +68,7 @@ header h1 {
   color: #000000;
   font-size: 40px;
 }
+
 header h2 {
   font-family: "Forum", cursive;
   color: #000000;
@@ -56,7 +83,7 @@ h6 {
   font-family: "Forum", cursive;
   text-align: center;
   font-size: 150%;
-  margin: 0 1.5em 0.5em 1.5em;
+  margin: 0 1.5em .5em 1.5em;
 }
 
 a {
@@ -65,6 +92,7 @@ a {
   font-size: large;
   color: white;
 }
+
 a:hover {
   text-decoration: underline;
 }
@@ -80,7 +108,7 @@ p {
   margin-top: 25%;
 }
 
-[role=banner] {
+[role="banner"] {
   margin: 0 auto;
   text-align: center;
   height: 200px;
@@ -91,7 +119,7 @@ p {
 
 /* "circles" each div with the role of "article" 
 Also "circles" each section in the sidebar, we need to decide if we want that as planets or something different. I think we decided to have them as planets though.*/
-[role=article] {
+[role="article"] {
   border-radius: 50%;
   width: 335px;
   height: 335px;
@@ -99,7 +127,8 @@ Also "circles" each section in the sidebar, we need to decide if we want that as
   overflow: auto;
   padding: 70px;
 }
-[role=article] h3 {
+
+[role="article"] h3 {
   margin-top: -25px;
 }
 
@@ -114,6 +143,7 @@ footer {
   overflow: auto;
   padding: 70px;
 }
+
 .design-selection h3,
 .design-archives h3,
 .zen-resources h3,
@@ -121,6 +151,7 @@ footer h3 {
   margin-top: -25px;
   margin-bottom: 0;
 }
+
 .design-selection ul,
 .design-archives ul,
 .zen-resources ul,
@@ -140,10 +171,12 @@ footer ul {
   overflow: auto;
   padding: 70px;
 }
+
 .summary h3 {
   margin-top: -35px;
   margin-bottom: 0;
 }
+
 .summary ul {
   padding-left: 10px;
   margin-top: 10px;
@@ -171,10 +204,12 @@ footer ul {
   overflow: auto;
   padding: 70px;
 }
+
 .benefits h3 {
   margin-top: -35px;
   margin-bottom: 0;
 }
+
 .benefits ul {
   padding-left: 10px;
   margin-top: 10px;
@@ -188,6 +223,7 @@ footer ul {
 .design-selection {
   background-image: url(svg/planet-1.svg);
 }
+
 .design-selection li {
   font-family: "Forum", cursive;
   list-style: none;
@@ -196,6 +232,7 @@ footer ul {
 .design-archives {
   background-image: url(svg/planet-3.svg);
 }
+
 .design-archives li {
   list-style: none;
 }
@@ -203,6 +240,7 @@ footer ul {
 .zen-resources {
   background-image: url(svg/planet-7.svg);
 }
+
 .zen-resources li {
   font-family: "Forum", cursive;
   list-style: none;
@@ -212,18 +250,23 @@ footer {
   text-align: center;
   background-image: url(svg/planet-4.svg);
 }
+
 footer a {
   margin: 75px;
   font-size: 20px;
 }
 
+#css-zen-garden {
+  margin-top: 0;
+}
+
 /* Hide scrollbar for Chrome, Safari and Opera */
-[role=article]::-webkit-scrollbar, .design-selection::-webkit-scrollbar {
+[role="article"]::-webkit-scrollbar, .design-selection::-webkit-scrollbar {
   display: none;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
-[role=article], .design-selection {
+[role="article"], .design-selection {
   -ms-overflow-style: none;
   /* IE and Edge */
   scrollbar-width: none;
@@ -239,36 +282,31 @@ footer a {
     font-size: 30px;
     margin-top: -20px;
   }
-
   h3,
-h4,
-h5,
-h6 {
+  h4,
+  h5,
+  h6 {
     font-size: 175%;
     margin-top: 50px;
     margin-bottom: 30px;
   }
-
   p {
     font-size: larger;
     padding: 15px 0 0 10px;
   }
-
-  [role=article],
-.design-selection,
-.design-archives,
-.zen-resources {
+  [role="article"],
+  .design-selection,
+  .design-archives,
+  .zen-resources {
     width: 450px;
     height: 450px;
     padding: 5em 5em;
   }
-
-  [role=banner] {
+  [role="banner"] {
     height: 300px;
     width: 600px;
     border-radius: 0 0 600px 600px;
   }
-
   .summary {
     width: 300px;
     height: 300px;
@@ -281,7 +319,6 @@ h6 {
   .summary p {
     margin: 5px 10px;
   }
-
   .preamble {
     width: 500px;
     height: 500px;
@@ -290,32 +327,27 @@ h6 {
   .preamble h3 {
     margin-top: 20px;
   }
-
   .explanation {
     width: 550px;
     height: 550px;
     margin: 50px auto 50px 5%;
   }
-
   .participation {
     width: 600px;
     height: 600px;
     margin: 50px 5% 50px auto;
   }
-
   .benefits {
     width: 355px;
     height: 355px;
     margin: 50px auto 50px 10%;
   }
-
   .requirements {
     width: 725px;
     height: 725px;
     margin: 50px 100px 0 auto;
     padding: 130px;
   }
-
   footer {
     width: 250px;
     height: 250px;
@@ -324,7 +356,6 @@ h6 {
   footer a {
     font-size: 25px;
   }
-
   .design-selection {
     width: 305px;
     height: 305px;
@@ -333,7 +364,6 @@ h6 {
   .design-selection li {
     padding: 2.5px 0;
   }
-
   .design-archives {
     width: 200px;
     height: 200px;
@@ -345,7 +375,6 @@ h6 {
   .design-archives li {
     padding: 2.5px 0;
   }
-
   .zen-resources {
     width: 250px;
     height: 250px;
@@ -358,5 +387,4 @@ h6 {
     padding: 2.5px 0;
   }
 }
-
 /*# sourceMappingURL=small-styles.css.map */
