@@ -270,18 +270,27 @@ footer {
         width: 550px;
         height: 550px;
         margin: 50px auto 50px 5%;
+        h3 {
+            margin-top: 20px;
+        }
     }
 
     .participation {
         width: 600px;
         height: 600px;
         margin: 50px 5% 50px auto;
+        h3 {
+            margin-top: 20px;
+        }
     }
 
     .benefits {
         width: 355px;
         height: 355px;
         margin: 50px auto 50px 10%;
+        h3 {
+            margin-top: 10px;
+        }
     }
 
     .requirements {
